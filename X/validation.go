@@ -1,4 +1,4 @@
-package x
+package X
 
 func IsZeroValue(any interface{}) bool {
 	if any == nil {
