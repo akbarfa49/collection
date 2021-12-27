@@ -1,4 +1,4 @@
-package x
+package X
 
 func Dereference(any interface{}) interface{} {
 	if any == nil {
@@ -34,6 +34,8 @@ func Dereference(any interface{}) interface{} {
 	case *uint16:
 		return *v
 	case *uintptr:
+		return *v
+	case *interface{}:
 		return *v
 	default:
 		return any
