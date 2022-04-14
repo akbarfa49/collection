@@ -21,20 +21,20 @@ func ToS(b []byte) string {
 }
 
 //string number compatible
-func BStrtoInt64(b []byte) (i int64) {
+func ToInt64(b []byte) (i int64) {
 	//strconv copy the value so safe to change byte after this
 	i, _ = strconv.ParseInt(ToSUnsafe(b), 10, 64)
 	return
 }
 
-func BStrToFloat64(b []byte) (i float64) {
+func ToFloat64(b []byte) (i float64) {
 	//strconv copy the value so safe to change byte after this
 	i, _ = strconv.ParseFloat(ToSUnsafe(b), 64)
 	return
 }
 
 //string number compatible
-func SToU(b []byte) (u uint64) {
+func ToU(b []byte) (u uint64) {
 	//strconv copy the value so safe to change byte after this
 	u, _ = strconv.ParseUint(ToSUnsafe(b), 10, 64)
 	return
